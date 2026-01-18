@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('todo-data', JSON.stringify(tasks));
     }
 
-    // Fungsi tanggal random 1 tahun ke belakang
     function getRandomDate() {
         const now = new Date();
         const past = new Date();
@@ -31,20 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let finalDateObj;
 
-        // User pilih tanggal + waktu
+        
         if (taskdate.value && tasktime.value) {
             finalDateObj = new Date(`${taskdate.value}T${tasktime.value}`);
 
-        // Jika user hanya isi tanggal
+        
         } else if (taskdate.value && !tasktime.value) {
             finalDateObj = new Date(`${taskdate.value}T00:00`);
 
-        // Jika user hanya isi waktu
+        
         } else if (!taskdate.value && tasktime.value) {
             const today = new Date().toISOString().split("T")[0];
             finalDateObj = new Date(`${today}T${tasktime.value}`);
 
-        // Tidak memilih → random
+        
         } else {
             finalDateObj = getRandomDate();
         }
@@ -94,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderTasks();
             });
 
-            // Tombol hapus
+        
             const deleteBtn = listItem.querySelector('.delete-btn');
             deleteBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -127,3 +126,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderTasks();
 });
+
