@@ -37,14 +37,6 @@ Aplikasi To-Do List sederhana berbasis **HTML, CSS, dan JavaScript** yang memung
    - Jika teks kosong → tampilkan peringatan.
 4. Jika valid:
    - Buat objek tugas baru:
-     ```
-     {
-       text: "...",
-       date: "...",
-       time: "...",
-       completed: false
-     }
-     ```
    - Push ke array `tasks`.
    - Simpan array ke LocalStorage.
    - Render ulang daftar tugas.
