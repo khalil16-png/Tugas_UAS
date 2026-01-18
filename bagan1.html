@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="bagan2.css">
+    <link rel="icon" href="GRB.icon.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="GRB.icon.png" type="image/png" sizes="64x64">
+    <link rel="apple-touch-icon" href="GRB.icon.png">
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>📝 Daftar Tugas</h1>
+
+        <div class="form-container">
+            <input type="text" id="taskinput" placeholder="Tambahkan tugas...">
+            <input type="date" id="taskdate">
+            <input type="time" id="tasktime">
+            <button id="addtaskbtn">Tambah 💢</button>
+        </div>
+
+        <div class="counts">
+            Total: <span id="totalCount">0</span> |
+            Angges: <span id="completedCount">0</span> |
+            Acan: <span id="pendingCount">0</span>
+        </div>
+
+        <ul id="tasklist"></ul>
+    </div>
+
+    <script src="bagan3.js"></script>
+</body>
+</html>
